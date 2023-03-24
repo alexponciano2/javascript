@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p>
+        <div id="res">Resultado</div>
+    </p>
+
+    <script>
+        function somar(){
+            // faz a seleção dos inputs e div do HTML pra usarmos no JS
+            let tn1 = document.getElementById('txtn1')
+            let tn2 = document.querySelector('input#txtn2')
+            let res = document.querySelector('div#res')
+            // agora tem que transformar os dados das caixas que são textos em números.
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            // agora faz a operação matemática para somar os valores
+            let soma = n1 + n2
+            // agora manda imprimir o resultado (res) por cima do texto "resultado" (vai trocar)
+            res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${soma}</strong>`
+
+        }
+    </script>
+</body>
+</html>
